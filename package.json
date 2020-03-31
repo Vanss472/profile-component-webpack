@@ -1,0 +1,43 @@
+{
+  "name": "profile-component-webpack",
+  "version": "1.0.0",
+  "description": "Profile Component using Webpack",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --open",
+    "build": "rm -rf ./dist && webpack --mode=development"
+  },
+  "keywords": [
+    "webpack",
+    "styled-component",
+    "frontend",
+    "javascript"
+  ],
+  "author": "Vanessa Martinez",
+  "license": "ISC",
+  "browserslist": [
+    "defaults",
+    "not ie <= 10"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.2",
+    "handlebars": "^4.7.3",
+    "handlebars-loader": "^1.7.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-normalize": "^8.0.1",
+    "sanitize.css": "^11.0.0",
+    "sass-loader": "^8.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

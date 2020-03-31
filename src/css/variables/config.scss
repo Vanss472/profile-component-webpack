@@ -1,0 +1,44 @@
+// font stacks
+$font-helvetica: 'Helvetica', 'Arial', sans-serif;
+
+// colors - Colors names from http://www.color-blindness.com/color-name-hue/
+$color-black: #000;
+$color-white: #fff;
+
+// blue
+$color-solitude: #dce1e9;
+$color-medium-blue: #3504bc;
+$color-dodger-blue: #1963ff;
+
+// grey
+$color-night-rider: #333333;
+
+// transitions
+$transition-duration-default: 300ms;
+$transition-duration-fast: 150ms;
+$transition-easing-default: ease-in-out;
+
+// Layout width
+$profile-width: 500px;
+$layout-width: $profile-width;
+$layout-min-width: 320px;
+
+// Minimum Width Breakpoints
+$bp500: 'screen and (min-width: 500px)';
+$bp768: 'screen and (min-width: 768px)';
+$bp960: 'screen and (min-width: 960px)';
+$bp1024: 'screen and (min-width: 1024px)';
+$bp1280: 'screen and (min-width: 1280px)';
+$bp2000: 'screen and (min-width: 2000px)';
+
+// Maximum Width Breakpoints
+$bp500max: 'screen and (max-width: 479px)';
+$bp768max: 'screen and (max-width: 767px)';
+$bp960max: 'screen and (max-width: 959px)';
+$bp1280max: 'screen and (max-width: 1279px)';
+
+// Min/Max Width Breakpoints
+$bp768-960: 'screen and (min-width: 768px) and (max-width: 959px)';
+$bp768-1280: 'screen and (min-width: 768px) and (max-width: 1279px)';
+$bp960-1280: 'screen and (min-width: 960px) and (max-width: 1279px)';
+$bp1450-2000: 'screen and (min-width: 1450px) and (max-width: 2000px)';

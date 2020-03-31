@@ -1,0 +1,38 @@
+// Fluid Type Sass Mixin from https://codepen.io/MadeByMike/pen/vNrvdZ/
+// References // Indrek Pass also has a fantastic mixin here: http://sassmeister.com/gist/7f22e44ace49b5124eec
+// Usage:
+// @include interpolate(font-size, 580px, 1440px, 14px, 16px);
+@mixin interpolate($properties, $min-value, $max-value) {
+    & {
+        @each $property in $properties {
+            #{$property}: $min-value;
+        }
+
+        @media screen and (min-width: $layout-min-width) {
+            @each $property in $properties {
+                #{$property}: calc-interpolation($layout-min-width, $min-value, $layout-width, $max-value);
+            }
+        }
+
+        @media screen and (min-width: $layout-width) {
+            @each $property in $properties {
+                #{$property}: $max-value;
+            }
+        }
+    }
+}
+
+// Requires the calc-interpolation function which can also be used independently
+
+@function calc-interpolation($layout-min-width, $min-value, $layout-width, $max-value) {
+    $a: ($max-value - $min-value) / ($layout-width - $layout-min-width);
+    $b: $min-value - $a * $layout-min-width;
+
+    $sign: "+";
+    @if ($b < 0) {
+        $sign: "-";
+        $b: abs($b);
+    }
+    @return calc(#{$a*100}vw #{$sign} #{$b});
+}
+

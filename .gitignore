@@ -1,0 +1,11 @@
+.git
+.DS_Store
+node_modules/
+.sass-cache
+.bundle
+.cache
+.tmp
+npm-debug.log
+package-lock.json
+
+dist/

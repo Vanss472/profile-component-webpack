@@ -1,0 +1,4 @@
+@mixin max-width {
+  max-width: $layout-width;
+  @include margin(null auto);
+}

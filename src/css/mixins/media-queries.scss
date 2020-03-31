@@ -1,0 +1,7 @@
+// Usage:
+// @include mq($bp580) { property: value; }
+@mixin mq($mq) {
+  @media #{$mq} {
+    @content;
+  }
+}

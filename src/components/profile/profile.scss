@@ -1,0 +1,129 @@
+@import '../../css/styles.scss';
+
+$profile-borderRadius: 10px;
+
+.profile-card {
+  @include margin(rem(50) null);
+  background-color: $color-solitude;
+
+  &-wrapper {
+    max-width: $profile-width;
+    @include margin(null auto);
+    overflow: hidden;
+  }
+
+  &-bordered {
+    background-color: $color-white;
+
+    @include mq($bp500) {
+      border-radius: $profile-borderRadius;
+      box-shadow: 0px 0px 6px 3px rgba($color-black, 0.35);
+    }
+  }
+
+  &-cover {
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    @include padding(null null percentage(251/500) null);
+  }
+
+  .profile-image-follow {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @include padding(null rem(20));
+
+    @include mq($bp500) {
+      @include padding(null rem(30) null rem(35));
+    }
+
+    .profile-image {
+      width: rem(90);
+      height: rem(90);
+      background-color: $color-white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px 3px rgba($color-black, 0.35);
+      overflow: hidden;
+      padding: rem(5);
+      @include margin(rem(-45) null null);
+
+      img {
+        height: calc(5.625rem - 0.625rem);
+        object-fit: cover;
+      }
+    }
+
+    .profile-follow {
+      @include margin(rem(10) null null);
+
+      .button {
+        display: flex;
+        height: rem(30);
+        @include interpolate(font-size, 14px, 16px);
+        border: 2px solid $color-medium-blue;
+        border-radius: $profile-borderRadius;
+        background-color: $color-white;
+        color: $color-medium-blue;
+        @include padding(null rem(27));
+        transition: all 0.3s ease;
+
+        &.is-active,
+        &:hover {
+          background-color: $color-medium-blue;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .profile-detail {
+    @include padding(rem(27) rem(20) rem(12));
+
+    @include mq($bp500) {
+      @include padding(null rem(40) null);
+    }
+  }
+
+  .profile-title {
+    h1 {
+      @include interpolate(font-size, 20px, 24px);
+      line-height: 1;
+      font-weight: normal;
+      @include margin(0 null rem(20));
+      color: $color-night-rider;
+    }
+  }
+
+  .profile-desciption {
+    p {
+      @include margin(rem(20) null);
+      @include interpolate(font-size, 16px, 16px);
+      line-height: rem(22);
+      color: $color-night-rider;
+    }
+
+    a {
+      color: $color-dodger-blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .profile-location {
+    p {
+      @include margin(rem(20) null);
+      @include interpolate(font-size, 14px, 14px);
+      line-height: rem(16);
+      color: $color-night-rider;
+
+      @include mq($bp500) {
+        line-height: rem(22);
+      }
+    }
+  }
+}
