@@ -5,6 +5,7 @@ node_modules/
 .bundle
 .cache
 .tmp
+yarn-error.log
 npm-debug.log
 package-lock.json
 
